@@ -4,9 +4,6 @@ Are you looking forward to learn Jenkins right from Zero(installation) to Hero(B
 
 ## Installation on EC2 Instance
 
-YouTube Video ->
-https://www.youtube.com/watch?v=zZfhAXfBvVA&list=RDCMUCnnQ3ybuyFdzvgv2Ky5jnAA&index=1
-
 
 ![Screenshot 2023-02-01 at 5 46 14 PM](https://user-images.githubusercontent.com/43399466/216040281-6c8b89c3-8c22-4620-ad1c-8edd78eb31ae.png)
 
@@ -31,7 +28,7 @@ Install Java
 
 ```
 sudo apt update
-sudo apt install openjdk-11-jre
+sudo apt install openjdk-11-jre -y
 ```
 
 Verify Java is Installed
@@ -49,7 +46,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
-sudo apt-get install jenkins
+sudo apt-get install jenkins -y
 ```
 
 **Note: ** By default, Jenkins will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 8080 in the inbound traffic rules as show below.
@@ -111,7 +108,7 @@ Run the below command to Install Docker
 
 ```
 sudo apt update
-sudo apt install docker.io
+sudo apt install docker.io -y
 ```
  
 ### Grant Jenkins user and Ubuntu user permission to docker deamon.
